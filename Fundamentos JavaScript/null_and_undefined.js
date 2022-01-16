@@ -1,4 +1,4 @@
-conceito de null e undefined
+// conceito de null e undefined
 
 /*
 O que significa passar os dados por referência?
