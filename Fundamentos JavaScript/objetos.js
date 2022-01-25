@@ -19,3 +19,16 @@ const pessoa2 = {
     cor: 'preto'
 }
 console.log(pessoa2);
+
+// retornar somente as Chaves do objeto
+console.log(Object.keys(pessoa))
+    // retornar somente os Valores do objeto
+console.log(Object.values(pessoa))
+    // gerar um Array com chaves e valores do objeto
+console.log(Object.entries(pessoa))
+    // Remover atribaauto de um objeto
+delete pessoa.idade
+
+// criando um a partir de um objeto
+const arr = Object.entries(pessoa);
+console.log(arr[0])
