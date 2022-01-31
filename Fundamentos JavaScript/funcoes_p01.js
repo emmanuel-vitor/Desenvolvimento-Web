@@ -23,5 +23,6 @@ function parimpar(numero) {
 
 }
 
-console.log(parimpar(11))
-console.log(parimpar(12))
+console.log(parimpar(11));
+console.log(parimpar(12));
+
