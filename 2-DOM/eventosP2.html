@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Dom</title>
+</head>
+
+<!-- eveento onload, é disparando quando a pagina carrega por completa -->
+<body >
+
+   <h1>Trabalhando com Eventos Parte 2</h1>
+   
+   <img id="imagem" src="https://url.gratis/KERIV0" alt="Tulipas vermelhas">
+  
+  <div>
+    <!-- onMouseOver	define ação quando o usuário passa o mouse sobre o elemento
+    onMouseOut	define ação quando o usuário retira o mouse sobre o elemento -->
+      <button type="submit"  id="botao" onmouseover="mouseEmCima(this)" onmouseout="mouseFora(this)">Clique-me</button>  
+  </div>
+   
+      
+   <script>
+
+    //declaração de variaveis
+    let imagem = document.getElementById('imagem');
+    imagem.style.height = '20em';   
+    imagem.style.width = '20em';
+
+    function mouseEmCima(botao) {
+       botao.style.backgroundColor = 'red';
+    }
+
+    function mouseFora(botao) {
+       botao.style.backgroundColor = ' #ccc';
+    }
+
+  // atribuido evento direto no JavaScript
+        function mudarImg() {
+            let trocarImagem = document.getElementById('botao');
+              imagem.src = 'https://url.gratis/3RGsqP';
+        }
+
+    /* addEventListener, callback que será disparada quando o evento acontecer
+       target.addEventListener(event, function)
+       target : o elemento HTML que você será manipulado. 
+       event: evento que será realizado
+       function: especifica a função a ser executada quando o evento é detectado.
+    */
+    botao.addEventListener('click', mudarImg);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <h1>TRABALHANDO COM TIMER E INTERVALO</h1>
+
+    <!-- Time é utilizado quandro precisa que se tenha um "delay" entre o
+        disparo da função0 e a ação que deverá ser executada -->
+    <p id="p0">Usando setTimeout</p>
+    <button onclick="testeTimer()">Clique-me</button>
+
+
+
+    <p id="p1">Usando setInterval</p>
+    <button onclick="useSetIntervalStart()">Start</button>
+    <button onclick="useSetIntervalStop()">Stop</button>
+   
+    <script >
+        // inicio do setTimeOut
+     
+        function testeTimer() {
+            let p0 = document.getElementById('p0');
+            p0.innerHTML = "new text"
+            /* Metodo que executa um bloco de codigo após um determinado tempo expecificado.
+               este delay é executado apenas uma vez.
+                    setTimeout(function, milliseconds);
+                    estrutura (função que será executado, tempo em milissegundos)
+            */            
+           setTimeout(()=>{
+            let p0 = document.getElementById('p0');
+            p0.style.color = 'red';
+           }, 3000);
+        }
+         // fim do setTimeOut
+
+        // inicio do setInterval
+        let interval;
+        let numero =0;
+        function useSetIntervalStart() {
+            interval=  setInterval(() => {
+                let p1 =document.getElementById('p1');
+                p1.innerHTML += " "+ numero;
+                numero++;
+                }, 1000);
+        }
+        function useSetIntervalStop() {
+            clearInterval(interval);
+          
+        }
+        
+        
+
+
+   
+
+
+       
+
+    </script>
+
+
+</body>
+</html>
